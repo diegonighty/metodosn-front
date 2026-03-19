@@ -266,11 +266,11 @@
             <thead>
             <tr>
                 <th>Iteración</th>
-                <th>a (x_l)</th>
-                <th>b (x_u)</th>
-                <th>c (x_r)</th>
+                <th>a</th>
+                <th>b</th>
+                <th>m</th>
                 <th>f(a)</th>
-                <th>f(c)</th>
+                <th>f(m)</th>
                 <th>Error (%)</th>
             </tr>
             </thead>
@@ -559,6 +559,8 @@
             let paso = 0.5;
             let intervalosEncontrados = [];
 
+            // PARA AUTODETECTAR INTERVALOS SIMPLEMENTE HACEMOS ITERACIONES CON INTERVALO DESDE -50 HASTA 50, Y VAMOS AGREGANDO 0.5 HASTA EVALUAR UN CAMBIO DE SIGNO
+            // EN ESE CASO LO AGREGAMOS A INTERVALOS ENCONTRADOS PARA DESPUÉS VER CUAL INTERVALO ES MEJOR PARA ITERAR
             for (let x = inicio; x <= fin; x += paso) {
                 let x1 = x;
                 let x2 = x + paso;
